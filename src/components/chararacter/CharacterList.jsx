@@ -35,8 +35,8 @@ const CharacterList = () => {
     }
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <p style={{ textAlign: 'center' }}>Loading...</p>;
+  if (error) return <p style={{ textAlign: 'center' }}>Error :(</p>;
 
   const characters =
     data &&
@@ -51,7 +51,7 @@ const CharacterList = () => {
   return (
     <>
       <div className={classnames(styles.characterContainer, styles.characterContainerCentered)}>
-        <div>
+        <div className={styles.characterContainerList}>
           <ul>{characters}</ul>
         </div>
       </div>
