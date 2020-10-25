@@ -1,4 +1,4 @@
-# New Project
+# Rick & Morty - React App with GraphQL using Apollo
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
