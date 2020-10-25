@@ -35,6 +35,10 @@ const CharacterList = () => {
     }
   };
 
+  const onRequest = (options) => () => {
+    return requestMoreData(options);
+  };
+
   if (loading) return <p style={{ textAlign: 'center' }}>Loading...</p>;
   if (error) return <p style={{ textAlign: 'center' }}>Error :(</p>;
 
@@ -56,11 +60,11 @@ const CharacterList = () => {
         </div>
       </div>
       <div className={classnames(styles.characterContainer, styles.characterContainerCentered)}>
-        <button type="button" onClick={() => requestMoreData(data.characters.info.prev)}>
+        <button type="button" onClick={onRequest(data.characters.info.prev)}>
           Back!
         </button>
         &nbsp;
-        <button type="button" onClick={() => requestMoreData(data.characters.info.next)}>
+        <button type="button" onClick={onRequest(data.characters.info.next)}>
           Next!
         </button>
       </div>
