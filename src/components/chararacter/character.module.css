@@ -1,0 +1,7 @@
+.characterContainer {
+  display: flex;
+}
+
+.characterContainerCentered {
+  justify-content: center;
+}
